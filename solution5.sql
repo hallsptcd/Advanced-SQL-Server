@@ -1,0 +1,2 @@
+SELECT c.name AS "Company Name", COUNT(cars.id) AS "Cars Not Displayed" FROM companies c LEFT JOIN cars ON c.id = cars.companyId LEFT JOIN eventParticipants ep ON cars.id = ep.carId WHERE ep.eventId IS NULL
+GROUP BY c.name;
